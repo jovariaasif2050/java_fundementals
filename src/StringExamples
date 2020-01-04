@@ -1,0 +1,230 @@
+import java.util.Arrays; 
+import java.util.List; 
+public class StringExamples {
+	static String remVowel (String exampleOne) {
+		return exampleOne.replaceAll("[aeiouAEIOU]", "");
+	}
+	public static void main(String[] args) {
+		
+	/*
+		String firstName ="PJ ";
+		String lastName = "Das";
+		
+		// String Methods
+		System.out.println("Length: " + firstName.length());
+		
+		System.out.println(firstName + lastName);
+		
+		//CharAT
+		
+		char ch = firstName.charAt(1);
+		//returns the char value at the 4th index System.out.println(ch);
+		System.out.println(ch);
+		
+		//Concat without using method
+		System.out.println("Concat without method: " + firstName + lastName);
+		
+		//Concat using concat () method
+		String  fullName = firstName.concat(lastName);
+		System.out.println("Concat using concat() method: " + fullName);
+		
+		//Contains is case-sensitive-- returns true/false
+		boolean isItPj = fullName.contains("PJ");
+		System.out.println("Is this PJ? " + isItPj);
+		
+		//Equals is also case-sensitive-- returns true/false-- String method
+		boolean isFirstNamePj= firstName.equals("PJ ");
+		System.out.println("Is First Name PJ? " + isFirstNamePj);
+		
+		//Check if two numbers are equal
+		int two = 2;
+		System.out.println("Is 2 and '2' equals: " + (two == 2));
+		
+		//Ignore case vs regular
+		String twoString = "PJ";
+		System.out.println("With ignore case: " + twoString.equals("Pj"));
+		System.out.println("Without ignore case: " + twoString.equalsIgnoreCase("Pj"));
+
+		//Replace
+		String sentence = "software testing is a very painful course";
+		System.out.println("Before replacement: " + sentence);
+		sentence = sentence.replace('a' , 'e');
+		System.out.println("After replacement: " + sentence);
+		
+		//Split()
+		String splitSentence= "java string split method";
+		String[] words= splitSentence.split("me");
+		for (int i=0; i< words.length; i++) {
+			System.out.println("After split " + words[i]);
+		}
+			//foreach vs. for loop
+		for (String w: words) {
+			System.out.println(w);
+		}
+	for (int i = 0; i <words.length; i++) {
+		System.out.println(words[i]);
+	}
+		
+		*/
+	
+//Sub String
+//	String stringForSubString = "javatpoint";
+	//System.out.println("Substring : " + stringForSubString.substring(2,4));
+	// ^ to print out "java
+	
+	// j a v a t p o i n t
+	// 0 1 2 3 4 5 6 7 8 9
+	
+	/*
+	 String stringForSubString = "javatpoint";
+	System.out.println("Substring : " + stringForSubString.substring(0, stringForSubString.length() -1));
+	// ^ to print "javatpoint" without the "t"
+	*/
+	
+	/*Case handling
+	String caseSentence= "Welcome to TRAINING";
+	String lowerCase = caseSentence.toLowerCase();
+	//System.out.println("Make" + caseSentence + "into lower case: + lowerCase);
+	String UpperCase = caseSentence.toUpperCase();
+	//System.out.println("Make" + caseSentence + "into upper case: + upperCase);
+	 
+	 */
+		
+	/*Value of
+			int value = 30;
+	String s1 = String.valueOf(value);
+	System.out.println("Value of " + s1 + 10);
+	*/
+	
+	
+	
+	/* Classwork
+	Define a string variable called ‘s’
+	 s=" Welcome to selenium java training"
+	Do the following:
+	 • Count how many words are present in a string. • Display all the words in upper case
+	 • Display all the words in lower case
+	 • Verify presence of "selenium"
+	 • Display all the words in reverse order
+	
+	
+	
+	/* Char Count
+	String sentenseTwo = "Welcome to selenium java training";
+	System.out.println(sentenseTwo.length());
+	
+		
+		
+	// Word count
+	String sentenseTwo = "Welcome to selenium java training";
+	String[] twoWords= sentenseTwo.split(" ");
+	System.out.println("After split: ");
+	for (int i=0; i< twoWords.length; i++) {
+		System.out.println(twoWords[i]); 
+	}
+	System.out.println("The total word count is: " + twoWords.length);
+	
+	
+	// Upper case
+	//String upperCase = sentenseTwo.toUpperCase();
+	//System.out.println("Upper Case: " + upperCase);
+	
+	System.out.println("Upper Case: " + sentenseTwo.toUpperCase());
+	
+	//Lower case
+	String lowerCase = sentenseTwo.toLowerCase();
+	System.out.println("Lower Case: " + lowerCase);
+	
+	
+	
+	//Verify-- contain
+	boolean verify = sentenseTwo.contains("selenium");
+	System.out.println("Is selenium in the sentense:  " + verify);
+	
+	
+	
+	//Reverse order
+	//to get numbers of words, split them by spaces (answer #1)
+	for (int j = twoWords.length - 1; j >= 0; j--) {
+	System.out.println(twoWords[j]);
+	}
+	
+	*/
+	
+	/* Homework 12/29
+	
+	
+	1	Write a Java program to get the character at the given index within the String. 
+	2	Write a Java program to concatenate two strings. 
+	3	Write a Java program to test if a given string contains the specified sequence of char values. 
+	4	Write a Java program to compare a given strings. 
+	5	Write a Java program to compare a given string to another string, ignoring case considerations. 
+	6	Write a java program to get the length of a given string. 
+	7	Java program to remove vowels from a string. 
+	
+	
+	*/
+		
+		//Question1
+		String exampleOne = "Learning JAVA is fun"; 
+		System.out.println("Original String is: " + exampleOne);
+		// Get the character at position 0 & 10
+		int position0 = exampleOne.charAt(0);
+		int position10 = exampleOne.charAt(10);
+	
+		//Results
+		System.out.println("The character at position 0 is: " + (char)position0);
+		System.out.println("The character at position 10 is: " + (char)position10);
+		
+		//Question2
+		String exampleTwo = " , Not Really!";
+		String  concatTwoStrings = exampleOne.concat(exampleTwo);
+		System.out.println("Concat of two strings are: " + concatTwoStrings);
+		
+		//Question3
+		// Equal-- exact phrase
+		String contain1 = "My Name is Jovaria"; 
+		String contain2 = "My Name is whatever";
+		CharSequence equals = "My Name is whatever";
+		System.out.println("Comparing " + contain1 +" and "+ equals + contain1.contentEquals(equals));
+		// ^ false
+		System.out.println("Comparing " + contain2 +" and "+ equals + contain2.contentEquals(equals));
+		// ^ true
+		
+		//Question4
+		String finalContain = "My Name is";
+		System.out.println("'My Name is' is found in first sentense: " + contain1.contains(finalContain));
+		// True
+		System.out.println("'My Name is' is found in second sentense: " + contain2.contains(finalContain));
+		// True
+	
+		//Question5
+		String equalCase = "Jovaria";
+		System.out.println("'Jovaria' is found in first sentense with ignore case: " + equalCase.equalsIgnoreCase("jovaria"));
+		System.out.println("'Jovaria' is found in first sentense without ignore case: " + equalCase.equals("jovaria"));
+		 
+		//Question6
+		System.out.println("Total characters in the sentence are: " + exampleOne.length());
+		
+		//Question7
+		// Regex only work in a "static" -- look at the very beginning of the code
+		System.out.print("Sentence without vowels is: ");
+		System.out.print(remVowel(exampleOne));
+		
+		/*Additional homework
+		//  Why is string immutable in JAVA with examples:
+	Immutable class in JAVA whose instances can't be modified. All information is an instance is initialized when the instance is first created, it can't be modified later
+		
+ 	Print every other word is different cases
+	example string s = "Welcome to selenium java training"
+	expected out: WELCOME TO SELENIUM java Training"
+		*/ 	
+		
+		for (int i=0; i < exampleOne.length(); i++) {
+			
+		}
+		
+	
+	}
+}
+
